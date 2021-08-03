@@ -1,8 +1,8 @@
 {
-  "name": "OpenVegeMap",
-  "short_name": "OpenVegeMap",
+  "name": "OpenToiletMap",
+  "short_name": "OpenToiletMap",
   "start_url": "./index.html",
-  "description": "Find vegetarian and vegan restaurants in your city",
+  "description": "Find nearby safe toilets, baby changing tables, and other restroom facilities",
   "display": "standalone",
   "theme_color": "#119352",
   "background_color": "#119352",
