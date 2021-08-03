@@ -1,9 +1,9 @@
 {
-  "name": "openvegemap",
-  "description": "Find vegetarian and vegan restaurants in your city",
+  "name": "opentoiletmap",
+  "description": "Find nearby safe toilets, baby changing tables, and other restroom facilities",
   "version": "1.0.0",
-  "author": "Pierre Rudloff",
-  "bugs": "https://github.com/Rudloff/openvegemap/issues",
+  "authors": ["Pierre Rudloff", "May Moscovitz", "Yugandhar Potti"],
+  "bugs": "https://github.com/maytransfer/opentoiletmap/issues",
   "dependencies": {
     "css-loader": "~2.0.0",
     "days": "^1.1.1",
@@ -37,7 +37,7 @@
     "husky": "^4.2.5",
     "qunit": "~2.9.2"
   },
-  "homepage": "https://github.com/Rudloff/openvegemap",
+  "homepage": "https://github.com/maytransfer/openvegemap",
   "husky": {
     "hooks": {
       "pre-commit": "grunt lint"
@@ -45,13 +45,18 @@
   },
   "keywords": [
     "map",
-    "openstreemap"
+    "openstreemap",
+    "bathroom",
+    "restroom",
+    "toilet",
+    "water closet",
+    "wash closet"
   ],
   "license": "GPL-3.0",
   "main": "dist/main.bundle.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rudloff/openvegemap.git"
+    "url": "https://github.com/maytransfer/opentoiletmap.git"
   },
   "scripts": {
     "postinstall": "webpack",
