@@ -8,11 +8,13 @@ Find vegetarian and vegan restaurants in your city
 yarn install
 ```
 
-## Android app
+## Local server
 
-OpenVegeMap is also available as [an Android app](https://github.com/Rudloff/openvegemap-cordova).
+```bash
+python3 -m http.server
+```
 
-[![Get it on F-Droid](https://fdroid.gitlab.io/artwork/badge/get-it-on.png)](https://f-droid.org/packages/pro.rudloff.openvegemap/)
+Then, open your Web browser to `http://localhost:8000/`.
 
 ## How to contribute
 
