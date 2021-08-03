@@ -41,8 +41,9 @@ const routingProviders = {
     graphhopper: 'https://graphhopper.com/maps/?point=&point={LAT},{LON}',
     openroute: 'https://openrouteservice.org/directions?a=null,null,{LAT},{LON}'
 };
+
 let overpassLayer;
-const overpassQuery = 'nwr({{bbox}})[~"^diet:.*$"~"."];out center;';
+const overpassQuery = 'nwr({{bbox}})[~"^toilet:.*$"~"."];out center;';
 
 /**
  * Open a dialog.
