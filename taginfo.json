@@ -1,18 +1,18 @@
 {
   "data_format": 1,
-  "data_url": "https://raw.githubusercontent.com/Rudloff/openvegemap/master/taginfo.json",
+  "data_url": "https://raw.githubusercontent.com/maytransfer/opentoiletmap/master/taginfo.json",
   "project": {
-    "name": "OpenVegeMap",
-    "description": "Find vegetarian and vegan restaurants in your city",
-    "project_url": "https://github.com/Rudloff/openvegemap",
-    "doc_url": "https://wiki.openstreetmap.org/wiki/OpenVegeMap",
-    "icon_url": "https://raw.githubusercontent.com/Rudloff/openvegemap/master/img/favicon-32x32.png",
-    "contact_name": "Pierre Rudloff",
-    "contact_email": "openvegemap@rudloff.pro"
+    "name": "OpenToiletMap",
+    "description": "Find nearby safe toilets, baby changing tables, and other restroom facilities",
+    "project_url": "https://github.com/matransfer/opentoiletmap",
+    "doc_url": "https://wiki.openstreetmap.org/wiki/OpenToiletMap",
+    "icon_url": "https://raw.githubusercontent.com/maytransfer/opentoiletmap/master/img/favicon-32x32.png",
+    "contact_name": "May Moscovitz",
+    "contact_email": "USE_GITHUB_PLEASE"
   },
   "tags": [
     {
-      "key": "diet:vegan",
+      "key": "toilets:unisex",
       "object_types": [
         "node",
         "area"
@@ -20,7 +20,7 @@
       "description": "Displayed in popup"
     },
     {
-      "key": "diet:vegan",
+      "key": "toilets:unisex",
       "value": "only",
       "object_types": [
         "node",
@@ -29,7 +29,7 @@
       "icon_url": "https://imgplaceholder.com/64x64/72af26/ffffff/fa-dot-circle-o"
     },
     {
-      "key": "diet:vegan",
+      "key": "toilets:unisex",
       "value": "yes",
       "object_types": [
         "node",
@@ -38,7 +38,7 @@
       "icon_url": "https://imgplaceholder.com/64x64/72af26/ffffff/fa-circle"
     },
     {
-      "key": "diet:vegetarian",
+      "key": "toilets:wheelchair",
       "object_types": [
         "node",
         "area"
@@ -46,7 +46,7 @@
       "description": "Displayed in popup"
     },
     {
-      "key": "diet:vegetarian",
+      "key": "toilets:wheelchair",
       "value": "only",
       "object_types": [
         "node",
@@ -55,7 +55,7 @@
       "icon_url": "https://imgplaceholder.com/64x64/728224/ffffff/fa-circle-thin"
     },
     {
-      "key": "diet:vegetarian",
+      "key": "toilets:wheelchair",
       "value": "yes",
       "object_types": [
         "node",
@@ -64,7 +64,7 @@
       "icon_url": "https://imgplaceholder.com/64x64/728224/ffffff/fa-circle-o"
     },
     {
-      "key": "diet:vegetarian",
+      "key": "toilets:wheelchair",
       "value": "no",
       "object_types": [
         "node",

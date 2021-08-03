@@ -43,7 +43,7 @@ const routingProviders = {
 };
 
 let overpassLayer;
-const overpassQuery = 'nwr({{bbox}})[~"^toilet:.*$"~"."];out center;';
+const overpassQuery = 'nwr({{bbox}})[~"^toilets:.*$"~"."];out center;';
 
 /**
  * Open a dialog.
