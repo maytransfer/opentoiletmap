@@ -2,7 +2,11 @@
   "name": "opentoiletmap",
   "description": "Find nearby safe toilets, baby changing tables, and other restroom facilities",
   "version": "1.0.0",
-  "authors": ["Pierre Rudloff", "May Moscovitz", "Yugandhar Potti"],
+  "authors": [
+    "Pierre Rudloff",
+    "May Moscovitz",
+    "Yugandhar Potti"
+  ],
   "bugs": "https://github.com/maytransfer/opentoiletmap/issues",
   "dependencies": {
     "css-loader": "~2.0.0",
@@ -44,13 +48,13 @@
     }
   },
   "keywords": [
+    "bathroom",
     "map",
     "openstreemap",
-    "bathroom",
     "restroom",
     "toilet",
-    "water closet",
-    "wash closet"
+    "wash closet",
+    "water closet"
   ],
   "license": "GPL-3.0",
   "main": "dist/main.bundle.js",
