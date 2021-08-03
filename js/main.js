@@ -478,8 +478,8 @@ function init() {
     map = L.map(
         'map',
         {
-            center: [48.85661, 2.351499],
-            zoom: 16,
+            center: [40.7201, -73.9516], // New York City
+            zoom: 13,
             maxZoom: 19,
             minZoom: 3,
             maxBounds: [[-90, -180], [90, 180]],
