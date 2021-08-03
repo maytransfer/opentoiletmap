@@ -8,6 +8,7 @@ export default class POI {
      * @param {string} tags.shop
      * @param {string} tags.cuisine
      * @param {string} tags.takeaway
+     * @param {string} tags.toilets
      * @param {string} tags.description
      * @param {string} tags.opening_hours
      * @param {string} tags.phone
@@ -19,13 +20,40 @@ export default class POI {
     }
 
     /**
+     * Check if a tag for a given key and optional subkey has the `yes` or `only` values.
+     * @param {string} key
+     * @param {string} subkey
+     * @return {Boolean}
+     */
+    isOK(key, subkey) {
+        var tag = key;
+        if (subkey) {
+          tag += ':' + subkey;
+        }
+        return !!(this.tags[tag] && (this.tags[tag] === 'yes' || this.tags[key] === 'only'));
+    }
+
+    /**
+     * Check if a tag for a given key and subkey has the `no` value set.
+     * @param {string} key
+     * @param {string} subkey
+     * @return {Boolean}
+     */
+    isNotOK(key, subkey) {
+        var tag = key;
+        if (subkey) {
+          tag += ':' + subkey;
+        }
+        return !!(this.tags[key] && this.tags[key] === 'no');
+    }
+
+    /**
      * Check if a POI is OK for the specified diet.
      * @param  {string}  diet Diet (vegan, vegetarian)
      * @return {Boolean}
      */
     isDiet(diet) {
-        const key = 'diet:' + diet;
-        return !!(this.tags[key] && (this.tags[key] === 'yes' || this.tags[key] === 'only'));
+        return this.isOK('diet', diet);
     }
 
     /**
@@ -34,8 +62,7 @@ export default class POI {
      * @return {Boolean}
      */
     isNotDiet(diet) {
-        const key = 'diet:' + diet;
-        return !!(this.tags[key] && this.tags[key] === 'no');
+        return this.isNotOK('diet', diet)
     }
 
     /**
@@ -61,18 +88,21 @@ export default class POI {
      * @return {string} Layer name
      */
     getLayer() {
-        if (this.isOnlyDiet('vegan')) {
-            return 'vegan-only';
+        if (this.isOK('toilets', 'unisex')) {
+          return 'vegan';
         }
-        if (this.isDiet('vegan')) {
-            return 'vegan';
-        }
-        if (this.isOnlyDiet('vegetarian')) {
-            return 'vegetarian-only';
-        }
-        if (this.isDiet('vegetarian')) {
-            return 'vegetarian';
-        }
+//        if (this.isOnlyDiet('vegan')) {
+//            return 'vegan-only';
+//        }
+//        if (this.isDiet('vegan')) {
+//            return 'vegan';
+//        }
+//        if (this.isOnlyDiet('vegetarian')) {
+//            return 'vegetarian-only';
+//        }
+//        if (this.isDiet('vegetarian')) {
+//            return 'vegetarian';
+//        }
 
         return 'other';
     }
@@ -82,13 +112,10 @@ export default class POI {
      * @return {string} Color name
      */
     getColor() {
-        if (this.isDiet('vegan')) {
+        if (this.isOK('toilets', 'unisex')) {
             return 'green';
         }
-        if (this.isDiet('vegetarian')) {
-            return 'darkgreen';
-        }
-        if (this.isNotDiet('vegetarian')) {
+        if (this.isNotOK('toilets', 'unisex')) {
             return 'red';
         }
         return 'gray';
@@ -99,19 +126,10 @@ export default class POI {
      * @return {string} Font Awesome icon name
      */
     getMarkerIcon() {
-        if (this.isOnlyDiet('vegan')) {
-            return 'bullseye';
-        }
-        if (this.isDiet('vegan')) {
+        if (this.isOK('toilets', 'unisex')) {
             return 'circle';
         }
-        if (this.isOnlyDiet('vegetarian')) {
-            return 'circle-notch';
-        }
-        if (this.isDiet('vegetarian')) {
-            return 'dot-circle';
-        }
-        if (this.isNotDiet('vegetarian')) {
+        if (this.isNotOK('toilets', 'unisex')) {
             return 'ban';
         }
         return 'question';
