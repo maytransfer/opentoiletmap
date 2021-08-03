@@ -514,11 +514,9 @@ function init() {
         new L.Control.InfoControl(
             {
                 position: 'bottomright',
-                content: '<div title="Restaurants that serve only vegan food"><i class="fa fa-bullseye" style="background-color: #72AF26"></i> Vegan only</div>' +
-                    '<div title="Restaurants that serve vegan food and other food"><i class="fa fa-circle" style="background-color: #72AF26"></i> Vegan friendly</div>' +
-                    '<div title="Restaurants that serve only vegetarian food but no vegan food"><i class="fa fa-circle-notch" style="background-color: #728224"></i> Vegetarian only</div>' +
-                    '<div title="Restaurants that serve vegetarian food and meat but no vegan food"><i class="fa fa-dot-circle" style="background-color: #728224"></i> Vegetarian friendly</div>' +
-                    '<div title="Restaurants that serve meat"><i class="fa fa-ban" style="background-color: #D63E2A"></i> Not vegetarian</div>' +
+                content: '<div title="Places that have only gender-neutral toilets"><i class="fa fa-bullseye" style="background-color: #72AF26"></i> Gender-neutral only</div>' +
+                    '<div title="Places that have gender-neutral and gendered toilet facilities"><i class="fa fa-circle" style="background-color: #72AF26"></i> Unisex available</div>' +
+                    '<div title="Places without gender-neutral toilets"><i class="fa fa-ban" style="background-color: #D63E2A"></i> Binary gender only</div>' +
                     '<div title="Restaurants we don\'t have enough information about"><i class="fa fa-question" style="background-color: #575757"></i> Unknown</div>'
             }
         )
