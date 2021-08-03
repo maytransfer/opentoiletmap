@@ -1,4 +1,4 @@
-# OpenVegeMap
+# OpenToiletMap
 
 Find toilets/restrooms/water closets in your area and filter by facility feature (changing table, unisex stalls, etc.).
 
