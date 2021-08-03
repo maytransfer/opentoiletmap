@@ -62,7 +62,7 @@ export default class POI {
      * @return {Boolean}
      */
     isNotDiet(diet) {
-        return this.isNotOK('diet', diet)
+        return this.isNotOK('diet', diet);
     }
 
     /**
