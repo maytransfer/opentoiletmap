@@ -27,7 +27,7 @@ qunit.test('openingHours', function (assert) {
 
 qunit.test('POI vegan cafe', function (assert) {
     'use strict';
-    const poi = new POI({'diet:vegan': 'yes', amenity: 'cafe'});
+    const poi = new POI({'toilets:unisex': 'yes', amenity: 'cafe'});
 
     assert.equal('green', poi.getColor(), 'getColor');
     assert.equal('circle', poi.getMarkerIcon(), 'getMarkerIcon');
@@ -51,5 +51,5 @@ qunit.test('Popup', function (assert) {
     'use strict';
     const popup = new Popup({'diet:vegan': 'foo'});
 
-    assert.equal('<ons-list-item modifier="nodivider"><div class="left list-item__title">Vegan</div> <div class="right list-item__subtitle">foo</div></ons-list-item>', popup.getPopupRows(), 'getPopupRows');
+    assert.equal(popup.getPopupRows(), '<ons-list-item modifier=\"nodivider\"><div class=\"left list-item__title\"><a href=\"https://wiki.openstreetmap.org/wiki/Key%3Adiet\">Vegan</a></div> <div class=\"right list-item__subtitle\">foo</div></ons-list-item>', 'getPopupRows');
 });
